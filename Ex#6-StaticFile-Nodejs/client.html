@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+    <!-- <style>
+        body {
+            background-color: purple;
+        } -->
+    <link rel="stylesheet" href="/style.css">
+
+    </style>
+</head>
+
+<body>
+    <h2>Fetch Api</h2>
+    <button id="mybtn">Fetch It</button>
+    <script>
+        document.getElementById('mybtn').onclick = () => {
+            const url = "http://localhost:5000/hi";
+            fetch(url)
+                .then(res => res.json())
+                .then(res2 => console.log(res2))
+                .catch(error => console.log("error in fetching::", error));
+        }
+
+    </script>
+</body>
+
+</html>
